@@ -15,7 +15,7 @@ const writeStream = fs.createWriteStream(join(__dirname, 'files/archive.gz'));
 const gzip = createGzip();
 
 const compress = async () => {
-  readStream.pipe(gzip).pipe(writeStream);
+  readStream.pipe(gzip).pipe(writeStream)
 };
 
 await compress();
