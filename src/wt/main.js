@@ -24,7 +24,7 @@ const performCalculations = async () => {
   Promise.all(
     new Array(countCore).fill().map((el, i) => {
       return new Promise((resolve, rejects) => {
-        const worker = new Worker(join(__dirname, './worker.js'), {
+        const worker = new Worker(join(__dirname, 'worker.js'), {
           workerData: { num: i + 10, id: i },
         });
         worker.on('online', () => resolve(worker));
