@@ -11,7 +11,7 @@ const create = async () => {
   } catch (e) {
     if (e.message !== 'FS operation failed') {
       await fs.writeFile(
-        join(__dirname, 'files/fresh.txt'),
+        join(__dirname, 'files', 'fresh.txt'),
         'I am fresh and young'
       );
     } else {
