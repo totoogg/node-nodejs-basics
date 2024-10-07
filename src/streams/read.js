@@ -6,7 +6,7 @@ import { stdout } from 'node:process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const readableStream = fs.createReadStream(
-  join(__dirname, 'files/fileToRead.txt'),
+  join(__dirname, 'files', 'fileToRead.txt'),
   'utf-8'
 );
 

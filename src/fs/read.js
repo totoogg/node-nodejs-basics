@@ -6,9 +6,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const read = async () => {
   try {
-    await fs.access(join(__dirname, 'files/fileToRead.txt'));
+    await fs.access(join(__dirname, 'files', 'fileToRead.txt'));
     console.log(
-      await fs.readFile(join(__dirname, 'files/fileToRead.txt'), {
+      await fs.readFile(join(__dirname, 'files', 'fileToRead.txt'), {
         encoding: 'utf8',
       })
     );

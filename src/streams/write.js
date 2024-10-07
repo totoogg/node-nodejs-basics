@@ -6,7 +6,7 @@ import { stdin } from 'node:process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const writeStream = fs.createWriteStream(
-  join(__dirname, 'files/fileToWrite.txt')
+  join(__dirname, 'files', 'fileToWrite.txt')
 );
 
 const write = async () => {

@@ -9,7 +9,7 @@ const hash = crypto.createHash('sha256');
 
 const calculateHash = async () => {
   const readableStream = createReadStream(
-    join(__dirname, 'files/fileToCalculateHashFor.txt')
+    join(__dirname, 'files', 'fileToCalculateHashFor.txt')
   );
   readableStream.on('readable', () => {
     const data = readableStream.read();

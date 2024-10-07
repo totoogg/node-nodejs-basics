@@ -5,12 +5,10 @@ import { createUnzip } from 'node:zlib';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const readStream = fs.createReadStream(
-  join(__dirname, 'files/archive.gz')
-);
+const readStream = fs.createReadStream(join(__dirname, 'files', 'archive.gz'));
 
 const writeStream = fs.createWriteStream(
-  join(__dirname, 'files/fileToCompress.txt')
+  join(__dirname, 'files', 'fileToCompress.txt')
 );
 
 const unzip = createUnzip();
